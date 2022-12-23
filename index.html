@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js" integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="js\script.js"></script>
+    <title>Expt 2</title>
+</head>
+<body>
+<!-------------Header Section------------->
+<div class="container-fluid" id="header">
+    <div class="card card-body" id="header-glass">
+        <p class="display-6">HALF WAVE RECTIFIER</p>
+    </div>
+</div>
+<!-------------Simulator Section------------->
+<div id="sim-cont">
+    <div id="simulator"><p id="sim-header">SIMULATOR PANEL</p>
+        <!-- <iframe id="responsive-iframe" width="1494" height="660" src="https://www.multisim.com/content/AjknqUfzxK3ZatBFbiGN6X/half-wave-rectifier-circuit-simulation/open"></iframe> -->
+    </div>
+</div>
+<!-------------Calculation Section------------->
+<div id="sim-cont">
+    <div id="simulator"><p id="sim-header">CALCULATIONS</p>
+        <div style="display: flex;">
+            <div class="container-fluid" id="inputs"><p id="input_label">INPUT VALUES <i class="fa fa-arrow-right"></i></p>
+                <div id="input-fields-1">
+                    <div class="input-group">
+                        <div class="input-group-prepend" id="vin-label">
+                            <span class="input-group-text">V<sub>IN</sub></span>
+                        </div>
+                        <input type="number" id="vin-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF INPUT VOLTAGE (VIN)">
+                    </div>
+                </div>
+                <div id="input-fields-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend" id="frq-label">
+                            <span class="input-group-text">F</span>
+                        </div>
+                        <input type="number" id="frq-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF FREQUENCY (F)">
+                    </div>
+                </div>
+                <div id="input-fields-3">
+                    <div class="input-group">
+                        <div class="input-group-prepend" id="rl-label">
+                            <span class="input-group-text">R<sub>L</sub></span>
+                        </div>
+                        <input type="number" id="rl-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF LOAD RESISTANCE (RL)">
+                    </div>
+                </div>
+                <div id="calc-btn">
+                    <button id="calculate-btn" type="button" class="btn btn-success">CALCULATE</button>
+                    <button id="reset-btn" type="button" class="btn btn-danger">RESET</button>
+                </div>
+            </div>
+            <div class="container-fluid" id="outputs"><p id="input_label">OUTPUT VALUES <i class="fa fa-arrow-right"></i></p>
+                <div id="out_one">
+                    <p><b>1.</b> Average Output Voltage (V<sub>O</sub>) =</p>
+                    <input type="number" id="V_out" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>2.</b> Average Output Current (I<sub>O</sub>) =</p>
+                    <input type="number" id="I_out" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>3.</b> Average Diode Voltage (V<sub>D</sub>) =</p>
+                    <input type="number" id="V_D" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>4.</b> RMS Output Voltage (V<sub>O(RMS)</sub>) =</p>
+                    <input type="number" id="V_out_rms" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>5.</b> RMS Output Current (I<sub>O(RMS)</sub>) =</p>
+                    <input type="number" id="I_out_rms" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>6.</b> RMS Diode Voltage (V<sub>D(RMS)</sub>) =</p>
+                    <input type="number" id="V_D_rms" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>7.</b> Power delivered to load (P<sub>(DEL)</sub>[LOAD]) =</p>
+                    <input type="number" id="p_del" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>8.</b> Rectifier Efficiency (╖) =</p>
+                    <input type="number" id="re" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>9.</b> Transformer utilisation factor (TUF) =</p>
+                    <input type="number" id="tuf" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>10.</b> Ripple factor (RF) =</p>
+                    <input type="number" id="rf" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>11.</b> Form factor (FF) =</p>
+                    <input type="number" id="ff" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>12.</b> Supply power factor (SPF) =</p>
+                    <input type="number" id="spf" class="form-control" readonly/>
+                </div>
+            </div>
+        </div>
+        </div>
+</div>
+</body>
+</html>
