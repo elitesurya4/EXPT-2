@@ -138,3 +138,9 @@ html, body{
 #out_one p,#out_two p{
   font-size: 1.3vw;
 }
+#next-btn{
+    margin-bottom: 1VW;
+    float: right;
+    margin-right: 2vw;
+    display: none;
+}
