@@ -54,9 +54,9 @@ html, body{
 /*---------------------------------Simulator Section---------------------------------*/
 #sim-cont{
   max-height: 65vw;
-  width: 196vw;
+  width: 190vw;
   display: flex;
-  margin-left: 1vw;
+  margin-left: 2.5vw;
   margin-top: 1vw;
   margin-bottom: 2vw;
 }
