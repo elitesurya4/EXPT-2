@@ -78,7 +78,7 @@ html, body{
 #half-simulator{
   position: relative;
   overflow: hidden;
-  width: 98%;
+  width: 95%;
   margin-top: 1vw;
   padding-top: 56.25%;
   border: 0.33vw solid black;
