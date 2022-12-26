@@ -35,7 +35,7 @@
 <!-------------Simulator Section------------->
 <div id="sim-cont">
     <div id="simulator"><p id="sim-header">SIMULATOR PANEL</p>
-        <iframe id="responsive-iframe" width="1494" height="660" src="https://www.multisim.com/content/RTVpCPtK4CcN4pxJDH3n4D/full-wave-bridge-rectifier-circuit-simulation/open/"></iframe>
+        <iframe id="responsive-iframe" width="1494" height="660" src="https://www.multisim.com/content/Y8acyAAAmBZw4mxCAEtMZW/center-tapped-full-wave-rectifier-circuit-simulation/open/"></iframe>
     </div>
 </div>
 <!-------------Calculation Section------------->
@@ -122,21 +122,29 @@
                     <input type="number" id="re" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>11.</b> Transformer Utility Factor (TUF) =</p>
+                    <p><b>11.</b> Primary Winding Transformer Utility Factor (TUF<sub>(PW)</sub>) =</p>
+                    <input type="number" id="tuf_pw" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>12.</b> Secondary Winding Transformer Utility Factor (TUF<sub>(SW)</sub>) =</p>
+                    <input type="number" id="tuf_sw" class="form-control" readonly/>
+                </div>
+                <div id="out_one">
+                    <p><b>13.</b> Transformer Utility Factor (TUF) =</p>
                     <input type="number" id="tuf" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>12.</b> DC Output Power (P<sub>dc</sub>) =</p>
+                    <p><b>14.</b> DC Output Power (P<sub>dc</sub>) =</p>
                     <input type="number" id="pdc" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>13.</b> Peak Inverse Voltage (PIV) =</p>
+                    <p><b>15.</b> Peak Inverse Voltage (PIV) =</p>
                     <input type="number" id="piv" class="form-control" readonly/>
                 </div>
             </div>
         </div>
         </div>
 </div>
-<a id="next-btn" type="button" class="btn btn-primary" href="fw2/index.html">NEXT</a>
+<a id="next-btn" type="button" class="btn btn-primary" href="#">NEXT</a>
 </body>
 </html>

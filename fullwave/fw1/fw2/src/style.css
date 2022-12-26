@@ -123,7 +123,7 @@ html, body{
 #outputs{
   margin-left: 15vw;
 }
-#V_out,#I_out,#V_D,#V_out_rms,#I_out_rms,#V_D_rms,#p_del,#re,#tuf,#rf,#ff,#spf,#piv{
+#V_out,#I_out,#V_out_rms,#I_out_rms,#crf,#vrf,#cff,#vff,#pf,#re,#tuf,#tuf_pw,#tuf_sw,#pdc,#piv{
   width: 10vw;
   height: 2vw;
   border: none;

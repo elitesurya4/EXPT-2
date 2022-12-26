@@ -9,7 +9,6 @@
   font-weight: normal;
   src: url('digital-7.woff') format('woff');
   }
-
 *{
   border: 0em;
   margin: 0em;
@@ -92,7 +91,7 @@ html, body{
     border-right: none;
     box-sizing: border-box;
 }
-#vin-value,#frq-value,#rl-value{
+#vin-value_p,#vin-value_s,#frq-value,#rl-value{
     border: 0.33vw solid black;
     box-sizing: border-box;
     /* margin-left: 5vw;
@@ -100,7 +99,7 @@ html, body{
     /* max-width: 23.9vw !important; */
     background: transparent;
 }
-#vin-value{
+#vin-value_p,#vin-value_s{
   max-width: 23.5vw;
 }
 #frq-value{
@@ -124,7 +123,7 @@ html, body{
 #outputs{
   margin-left: 15vw;
 }
-#V_out,#I_out,#V_D,#V_out_rms,#I_out_rms,#V_D_rms,#p_del,#re,#tuf,#rf,#ff,#spf{
+#V_out,#I_out,#V_out_rms,#I_out_rms,#crf,#vrf,#cff,#vff,#pf,#re,#tuf,#pdc,#piv{
   width: 10vw;
   height: 2vw;
   border: none;

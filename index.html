@@ -35,7 +35,7 @@
 <!-------------Simulator Section------------->
 <div id="sim-cont">
     <div id="simulator"><p id="sim-header">SIMULATOR PANEL</p>
-        <!-- <iframe id="responsive-iframe" width="1494" height="660" src="https://www.multisim.com/content/AjknqUfzxK3ZatBFbiGN6X/half-wave-rectifier-circuit-simulation/open"></iframe> -->
+        <iframe id="responsive-iframe" width="1494" height="660" src="https://www.multisim.com/content/AjknqUfzxK3ZatBFbiGN6X/half-wave-rectifier-circuit-simulation/open"></iframe>
     </div>
 </div>
 <!-------------Calculation Section------------->
@@ -46,9 +46,17 @@
                 <div id="input-fields-1">
                     <div class="input-group">
                         <div class="input-group-prepend" id="vin-label">
-                            <span class="input-group-text">V<sub>IN</sub></span>
+                            <span class="input-group-text">V<sub>IN(P)</sub></span>
                         </div>
-                        <input type="number" id="vin-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF INPUT VOLTAGE (VIN)">
+                        <input type="number" id="vin-value_p" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF INPUT VOLTAGE" onchange="inputcalc()">
+                    </div>
+                </div>
+                <div id="input-fields-1">
+                    <div class="input-group">
+                        <div class="input-group-prepend" id="vin-label">
+                            <span class="input-group-text">V<sub>IN(S)</sub></span>
+                        </div>
+                        <input type="number" id="vin-value_s" min="-230" max="230" step="0.01" class="form-control" readonly/>
                     </div>
                 </div>
                 <div id="input-fields-2">
@@ -56,7 +64,7 @@
                         <div class="input-group-prepend" id="frq-label">
                             <span class="input-group-text">F</span>
                         </div>
-                        <input type="number" id="frq-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF FREQUENCY (F)">
+                        <input type="number" id="frq-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF FREQUENCY">
                     </div>
                 </div>
                 <div id="input-fields-3">
@@ -64,7 +72,7 @@
                         <div class="input-group-prepend" id="rl-label">
                             <span class="input-group-text">R<sub>L</sub></span>
                         </div>
-                        <input type="number" id="rl-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF LOAD RESISTANCE (RL)">
+                        <input type="number" id="rl-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF LOAD RESISTANCE">
                     </div>
                 </div>
                 <div id="calc-btn">
@@ -121,10 +129,14 @@
                     <p><b>12.</b> Supply power factor (SPF) =</p>
                     <input type="number" id="spf" class="form-control" readonly/>
                 </div>
+                <div id="out_one">
+                    <p><b>13.</b> Peak Inverse Voltage (PIV) =</p>
+                    <input type="number" id="piv" class="form-control" readonly/>
+                </div>
             </div>
         </div>
         </div>
 </div>
-<a id="next-btn" type="button" class="btn btn-primary" href="#">NEXT</a>
+<a id="next-btn" type="button" class="btn btn-primary" href="fullwave/index.html">NEXT</a>
 </body>
 </html>

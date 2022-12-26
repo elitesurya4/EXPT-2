@@ -4,7 +4,7 @@ function inputcalc(){
     vin_s = (1/5)*parseFloat(vin_p);
     document.getElementById("vin-value_s").value = vin_s.toPrecision(4);
 }
-var vin,frqv,rlv,dov,doc,rov,roc,crf,vrf,cff,vff,pf,re,tuf,pdc;
+var vin,frqv,rlv,dov,doc,rov,roc,crf,vrf,cff,vff,pf,re,tuf,tuf_pw,tuf_sw,pdc;
 var a,b,c,d,e,cc,dd,ee;
 function calculation_1(){
 
@@ -58,10 +58,14 @@ function calculation_1(){
         // --------------------CALCULATION OF ╖--------------------
         re = (8/Math.pow(Math.PI,2))*100;
         document.getElementById("re").value = re.toPrecision(4);
+        // --------------------CALCULATION OF TUF(PW)--------------------
+        tuf_pw = 0.8106
+        document.getElementById("tuf_pw").value = tuf_pw.toPrecision(4);
+        // --------------------CALCULATION OF TUF(SW)--------------------
+        tuf_sw = 2*0.2866
+        document.getElementById("tuf_sw").value = tuf_sw.toPrecision(4);
         // --------------------CALCULATION OF TUF--------------------
-        a = (parseFloat(dov)*parseFloat(doc));
-        b = ((parseFloat(vin)/Math.sqrt(2))*parseFloat(roc));
-        tuf = (parseFloat(a)/parseFloat(b));
+        tuf = (parseFloat(tuf_pw)+parseFloat(tuf_sw))/2;
         document.getElementById("tuf").value = tuf.toPrecision(4);
         // --------------------CALCULATION OF Pdc--------------------
         pdc = (4*Math.pow(parseFloat(vin),2))/(Math.pow(Math.PI,2)*parseFloat(rlv));
