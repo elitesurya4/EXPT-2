@@ -74,7 +74,6 @@ html, body{
   font-family: 'Kaushan Script', cursive;
   text-shadow: 0vw 0.1vw 0.1vw red;
 }
-
 #half-simulator{
   position: relative;
   overflow: hidden;

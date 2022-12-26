@@ -4,7 +4,7 @@ function inputcalc(){
     vin_s = (1/5)*parseFloat(vin_p);
     document.getElementById("vin-value_s").value = vin_s.toPrecision(4);
 }
-var vin,frqv,rlv,dov,doc,rov,roc,crf,vrf,cff,vff,pf,re,tuf,tuf_pw,tuf_sw,pdc;
+var vin,frqv,rlv,dov,doc,rov,roc,crf,vrf,cff,vff,pf,re,tuf,tuf_pw,tuf_sw,pdc,piv;
 var a,b,c,d,e,cc,dd,ee;
 function calculation_1(){
 
@@ -71,7 +71,8 @@ function calculation_1(){
         pdc = (4*Math.pow(parseFloat(vin),2))/(Math.pow(Math.PI,2)*parseFloat(rlv));
         document.getElementById("pdc").value = pdc.toPrecision(4);                                                       
         // --------------------CALCULATION OF PIV--------------------
-        document.getElementById("piv").value = vin_s.toPrecision(4);
+        piv = 2*parseFloat(vin_s);
+        document.getElementById("piv").value = piv.toPrecision(4);
         alert("Output values calculated");
         document.getElementById("next-btn").style.display = "block";            
     }
