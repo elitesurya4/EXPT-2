@@ -9,17 +9,7 @@
   font-weight: normal;
   src: url('digital-7.woff') format('woff');
   }
-@font-face {
-  font-family: 'OldLondon';
-  font-style: normal;
-  font-weight: normal;
-  src: url('OldLondon.woff') format('woff');
-  }
-#font{
-  font-family: 'OldLondon';
-  margin-left: 5vw;
-  font-size: 10vw;
-}
+
 *{
   border: 0em;
   margin: 0em;
