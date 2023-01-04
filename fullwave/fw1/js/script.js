@@ -16,13 +16,13 @@ function calculation_1(){
     else if(document.getElementById("frq-value").value == ""){
         alert("Enter the Frequency for calculation")
     }
-    else if(document.getElementById("rl-value").value == ""){
-        alert("Enter the Load Resistance for calculation")
-    }
+    // else if(document.getElementById("rl-value").value == ""){
+    //     alert("Enter the Load Resistance for calculation")
+    // }
     else{
         vin = document.getElementById("p-value").value;
         frqv = document.getElementById("frq-value").value;
-        rlv = document.getElementById("rl-value").value;
+        rlv = 1000;
     
         // --------------------CALCULATION OF Vdc--------------------
         dov = (parseFloat(vin)*2)/Math.PI;
