@@ -1,8 +1,10 @@
-var vin_p,vin_s;
+var vin_p,vin_s,p_value;
 function inputcalc(){
     vin_p = document.getElementById("vin-value_p").value;
     vin_s = (1/5)*parseFloat(vin_p);
     document.getElementById("vin-value_s").value = vin_s.toPrecision(4);
+    p_value = parseFloat(vin_s)*Math.sqrt(2);
+    document.getElementById("p-value").value = p_value.toPrecision(4);
 }
 var vin,frqv,rlv,aov,aoc,adv,rov,roc,rdv,pdl,re,tuf,rf,ff,spf;
 var a,b,c,d,e;
@@ -18,7 +20,7 @@ function calculation_1(){
         alert("Enter the Load Resistance for calculation")
     }
     else{
-        vin = document.getElementById("vin-value_s").value;
+        vin = document.getElementById("p-value").value;
         frqv = document.getElementById("frq-value").value;
         rlv = document.getElementById("rl-value").value;
     
@@ -64,7 +66,7 @@ function calculation_1(){
         spf = 1/Math.sqrt(2);
         document.getElementById("spf").value = spf.toPrecision(4);           
         // --------------------CALCULATION OF PIV--------------------
-        document.getElementById("piv").value = vin_s.toPrecision(4);
+        document.getElementById("piv").value = p_value.toPrecision(4);
         alert("Output values calculated");
         document.getElementById("next-btn").style.display = "block";            
     }

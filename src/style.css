@@ -108,7 +108,7 @@ html, body{
     border-right: none;
     box-sizing: border-box;
 }
-#vin-value_p,#vin-value_s,#frq-value,#rl-value{
+#vin-value_p,#vin-value_s,#frq-value,#rl-value,#p-value{
     border: 0.33vw solid black;
     box-sizing: border-box;
     /* margin-left: 5vw;
@@ -122,7 +122,7 @@ html, body{
 #frq-value{
   max-width: 24.5vw;;
 }
-#rl-value{
+#rl-value,#p-value{
   max-width: 24vw;
 }
 #calc-btn{
@@ -133,7 +133,7 @@ html, body{
 #calculate-btn,#reset-btn{
   border: 0.33vw solid black;
 }
-#input-fields-1,#input-fields-2,#input-fields-3{
+#input-fields-1,#input-fields-2,#input-fields-3,#input-fields-4{
   margin-left: 1vw;
   margin-top: 2vw;
 }

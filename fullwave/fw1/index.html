@@ -78,6 +78,14 @@
                         <input type="number" id="rl-value" min="-230" max="230" step="0.01" class="form-control" placeholder="ENTER THE VALUE OF LOAD RESISTANCE">
                     </div>
                 </div>
+                <div id="input-fields-4" style="display: none;">
+                    <div class="input-group">
+                        <div class="input-group-prepend" id="rl-label">
+                            <span class="input-group-text">P<sub>V</sub></span>
+                        </div>
+                        <input type="number" id="p-value" min="-230" max="230" step="0.01" class="form-control">
+                    </div>
+                </div>
                 <div id="calc-btn">
                     <button id="calculate-btn" type="button" class="btn btn-success" onclick="calculation_1()">CALCULATE</button>
                     <button id="reset-btn" type="button" class="btn btn-danger">RESET</button>
@@ -85,19 +93,19 @@
             </div>
             <div class="container-fluid" id="outputs"><p id="input_label">OUTPUT VALUES <i class="fa fa-arrow-right"></i></p>
                 <div id="out_one">
-                    <p><b>1.</b> DC Output Voltage (V<sub>DC</sub>) =</p>
+                    <p><b>1.</b> DC Output Voltage (V<sub>DC</sub>) in Volts =</p>
                     <input type="number" id="V_out" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>2.</b> DC Output Current (I<sub>O</sub>) =</p>
+                    <p><b>2.</b> DC Output Current (I<sub>O</sub>) in Amperes =</p>
                     <input type="number" id="I_out" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>3.</b> RMS Output Voltage (V<sub>O(RMS)</sub>) =</p>
+                    <p><b>3.</b> RMS Output Voltage (V<sub>O(RMS)</sub>) in Volts =</p>
                     <input type="number" id="V_out_rms" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>4.</b> RMS Output Current (I<sub>O(RMS)</sub>) =</p>
+                    <p><b>4.</b> RMS Output Current (I<sub>O(RMS)</sub>) in Amperes =</p>
                     <input type="number" id="I_out_rms" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
@@ -121,7 +129,7 @@
                     <input type="number" id="pf" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>10.</b> Rectifier Efficiency (╖) =</p>
+                    <p><b>10.</b> Rectifier Efficiency (╖) in % =</p>
                     <input type="number" id="re" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
@@ -129,11 +137,11 @@
                     <input type="number" id="tuf" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>12.</b> DC Output Power (P<sub>dc</sub>) =</p>
+                    <p><b>12.</b> DC Output Power (P<sub>dc</sub>) in Watts =</p>
                     <input type="number" id="pdc" class="form-control" readonly/>
                 </div>
                 <div id="out_one">
-                    <p><b>13.</b> Peak Inverse Voltage (PIV) =</p>
+                    <p><b>13.</b> Peak Inverse Voltage (PIV) in Volts =</p>
                     <input type="number" id="piv" class="form-control" readonly/>
                 </div>
             </div>
