@@ -31,8 +31,8 @@ function calculation_1(){
         aoc = parseFloat(aov)/parseFloat(rlv);
         document.getElementById("I_out").value = aoc.toPrecision(4);
         // --------------------CALCULATION OF Vd--------------------
-        aod = -aov;
-        document.getElementById("V_D").value = aod.toPrecision(4);            
+        // aod = -aov;
+        // document.getElementById("V_D").value = aod.toPrecision(4);            
         // --------------------CALCULATION OF Vo(rms)--------------------
         rov = parseFloat(vin)/2;
         document.getElementById("V_out_rms").value = rov.toPrecision(4);            
@@ -40,8 +40,8 @@ function calculation_1(){
         roc = parseFloat(rov)/parseFloat(rlv);
         document.getElementById("I_out_rms").value = roc.toPrecision(4);            
         // --------------------CALCULATION OF Vd(rms)--------------------
-        rdv = parseFloat(rov);
-        document.getElementById("V_D_rms").value = rdv.toPrecision(4);            
+        // rdv = parseFloat(rov);
+        // document.getElementById("V_D_rms").value = rdv.toPrecision(4);            
         // --------------------CALCULATION OF P(del)[Load]--------------------
         pdl = Math.pow(rov,2)/parseFloat(rlv);
         document.getElementById("p_del").value = pdl.toPrecision(4);            
